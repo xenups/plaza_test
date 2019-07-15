@@ -1,0 +1,509 @@
+{
+	"info": {
+		"_postman_id": "1d0abea4-8206-4dc7-92cd-390ad8423bc7",
+		"name": "plza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "user list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create users ",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"username\": \"admin3\",\n    \"password\":\"amirhoseinlesani\",\n    \"first_name\": \"amir\",\n    \"last_name\": \"lesani\",\n    \"email\": \"admin@admin3.com\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recepie",
+			"item": [
+				{
+					"name": "get recepie list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 4,\n    \"name\": \"soup\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/recipe/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recipe",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get recepie list by user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create recepie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 4,\n    \"name\": \"soup2\"\n    \n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/recipe/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recipe",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete recepie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/recipe/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recipe",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update recepie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 4,\n    \"name\": \"khiarbaghali\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}recipe/4",
+							"host": [
+								"{{host}}recipe"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "steps",
+			"item": [
+				{
+					"name": "create step",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"baad ham mizanim\",\n    \"recipe\": 4\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/step/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"step",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get step List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 2\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/step/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"step",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get step Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/step/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"step",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete step",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 1\n}"
+						},
+						"url": {
+							"raw": "{{host}}step/",
+							"host": [
+								"{{host}}step"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ingredients",
+			"item": [
+				{
+					"name": "create ingredient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\": \"ard\"\n    ,\n    \"recipe\": 4\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/ingredient/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ingredient",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get ingredient",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/ingredient/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ingredient",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get ingredient of recepie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/recipiesingredients/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"recipiesingredients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete ingredient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"step_text\":\"aval ghati mikonim\",\n    \"recipe\": 1\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/ingredient/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"ingredient",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
