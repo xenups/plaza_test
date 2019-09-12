@@ -2,8 +2,10 @@ from rest_framework import serializers, exceptions
 import django.contrib.auth.password_validation as validators
 from App.models import Ingredient, Step, Recipe, User
 
-#a little changes
 
+# a little changes
+# hello world
+#new thing added
 class IngredientSerializer(serializers.ModelSerializer, ):
     class Meta:
         model = Ingredient
