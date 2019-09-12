@@ -36,9 +36,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App.apps.AppConfig',
+    'account.apps.AccountConfig',
     'rest_framework',
 
 ]
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     )
+# }
 AUTH_USER_MODEL = 'App.User'
 
 MIDDLEWARE = [
